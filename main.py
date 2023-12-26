@@ -94,8 +94,7 @@ def main():
             Fore.GREEN + Style.BRIGHT + "What can I get you?: " + Style.RESET_ALL
         )
         # check the question is safe
-        errors = get_moderation(new_question)
-        if errors:
+        if errors := get_moderation(new_question):
             print(
                 Fore.RED
                 + Style.BRIGHT
